@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   push.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: psastre <psastre@student.42barcelo>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/10/28 10:29:32 by psastre           #+#    #+#             */
+/*   Updated: 2023/10/28 12:59:20 by psastre          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../push_swap.h"
 
 int	push_stack(t_stack **stk, int cont, int index)
@@ -7,7 +19,7 @@ int	push_stack(t_stack **stk, int cont, int index)
 	new = ft_calloc(sizeof(t_node), 1);
 	if (!new)
 		return (ERROR);
-	new->cont = cont; 
+	new->cont = cont;
 	new->index = index;
 	new->next = (*stk)->first;
 	(*stk)->first = new;
@@ -17,8 +29,8 @@ int	push_stack(t_stack **stk, int cont, int index)
 
 int	pop_stack(t_stack **stk)
 {
-	t_node *rm;
-	t_node *next;
+	t_node	*rm;
+	t_node	*next;
 
 	if (!*stk || (*stk)->aize == 0)
 		return (ERROR);

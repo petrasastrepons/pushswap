@@ -1,8 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   push_swap.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: psastre <psastre@student.42barcelo>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/10/28 10:30:28 by psastre           #+#    #+#             */
+/*   Updated: 2023/10/28 13:02:00 by psastre          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../push_swap.h"
 
 int	stack_set(int ac, char **av, t_stack *stk)
 {
-	int	i; 
+	int	i;
 
 	i = ac -1;
 	while (i)
@@ -12,8 +24,8 @@ int	stack_set(int ac, char **av, t_stack *stk)
 
 void	indexer(t_stack *stk)
 {
-	t_node *tmp;
-	t_node *crnt;
+	t_node	*tmp;
+	t_node	*crnt;
 	int	idx1
 	int	idx2;
 
@@ -32,10 +44,11 @@ void	indexer(t_stack *stk)
 		crnt->index = idx1;
 		crnt = crnt->next;
 	}
+
 int	find_pos(t_stack *src, int trgt)
 {
-	t_node *aux; 
-	int	pos;
+	t_node	*aux;
+	int		pos;
 
 	pos = 0;
 	aux = src->first;
@@ -44,13 +57,13 @@ int	find_pos(t_stack *src, int trgt)
 		aux = aux->next;
 		pos++;
 	}
-	return(pos);
+	return (pos);
 }
 
 int	main(int ac, char **av)
 {
-	t_stack *a; 
-	t_stack *b;
+	t_stack	*a;
+	t_stack	*b;
 
 	parse(ac, av);
 	double_init(&a, &b);

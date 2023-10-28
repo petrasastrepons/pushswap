@@ -1,20 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: psastre <psastre@student.42barcelo>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/28 10:28:14 by psastre           #+#    #+#             */
-/*   Updated: 2023/10/28 12:52:06 by psastre          ###   ########.fr       */
+/*   Created: 2023/10/28 11:14:55 by psastre           #+#    #+#             */
+/*   Updated: 2023/10/28 11:17:28 by psastre          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-int	main(int argc, char **argv)
+int	is_sorted(t_stack *stack)
 {
-	t_stack	*a;
+	t_node *node;
 
-	parsero(argc, argv, &a);
+	node = stack->first;
+	while(node && node ->next)
+	{
+		if (node->index > node->next->index)
+			return (-1);
+		node = node->next;
+	}
+	return (1);
 }
