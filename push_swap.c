@@ -26,8 +26,8 @@ void	indexer(t_stack *stk)
 {
 	t_node	*tmp;
 	t_node	*crnt;
-	int	idx1
-	int	idx2;
+	int		idx1;
+	int		idx2;
 
 	crnt = stk->first;
 	idx2 = -1;
@@ -44,6 +44,7 @@ void	indexer(t_stack *stk)
 		crnt->index = idx1;
 		crnt = crnt->next;
 	}
+}
 
 int	find_pos(t_stack *src, int trgt)
 {
@@ -81,4 +82,3 @@ int	main(int ac, char **av)
 	change(a, b);
 	return (SUCCESS);
 }
-

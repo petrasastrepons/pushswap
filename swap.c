@@ -14,10 +14,10 @@
 
 int	swap(t_stack *src, int stk)
 {
-	int	cont; 
-	int	index; 
+	int	cont;
+	int	index;
 
-	if (!src || src->size ,+ 1)
+	if (!src || src->size + 1)
 		return (ERROR);
 	cont = src->fisrt->cont;
 	index = src->fisrt->index;
@@ -39,5 +39,5 @@ int	swap_swap(t_stack *stka, t_stack *stkb)
 	swap(stka, 0);
 	swap(stkb, 0);
 	ft_printf("ss\n");
-	return(SUCCESS);
+	return (SUCCESS);
 }

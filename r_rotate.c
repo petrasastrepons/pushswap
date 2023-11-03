@@ -43,7 +43,7 @@ int	r_rotate(T_stack *src, int stk)
 	src->first = bot;
 	if (stk == STKA)
 		ft_printf("rra\n");
-	else (stk == STKB)
+	else if (stk == STKB)
 		ft_printf("rrb\n");
 	return (SUCCESS);
 }

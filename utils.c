@@ -14,10 +14,10 @@
 
 int	is_sorted(t_stack *stack)
 {
-	t_node *node;
+	t_node	*node;
 
 	node = stack->first;
-	while(node && node ->next)
+	while (node && node ->next)
 	{
 		if (node->index > node->next->index)
 			return (-1);

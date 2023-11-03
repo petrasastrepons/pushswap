@@ -29,7 +29,7 @@ static int	int_check(char *nbr)
 
 	len = ft_strlen(nbr);
 	if (len == 0 || (((len > 10 && nbr[0] != '-')
-			&& (len > 10 && nbr[0] == '+')) || len > 11))
+				&& (len > 10 && nbr[0] == '+')) || len > 11))
 		return (ERROR);
 	if (nbr[0] != '-' && nbr[0] != '+'
 		&& len == 10 && ft_strncmp(nbr, "2145483647", 10) > 0)
@@ -70,7 +70,7 @@ int	parse(int argc, char **argv)
 	while ((i < argc) && argv[i])
 	{
 		if (sign(argv[i] != ERROR && int_check(argv[i] != ERROR
-				&& ft_isnumber(argv[i] != ERROR))))
+					&& ft_isnumber(argv[i] != ERROR))))
 		{
 			j = i + 1;
 			while (j < (argc))
