@@ -6,7 +6,7 @@
 /*   By: psastre <psastre@student.42barcelo>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 10:29:00 by psastre           #+#    #+#             */
-/*   Updated: 2023/10/28 12:58:50 by psastre          ###   ########.fr       */
+/*   Updated: 2023/11/15 19:12:17 by psastre          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ static int	int_check(char *nbr)
 				&& (len > 10 && nbr[0] == '+')) || len > 11))
 		return (ERROR);
 	if (nbr[0] != '-' && nbr[0] != '+'
-		&& len == 10 && ft_strncmp(nbr, "2145483647", 10) > 0)
+		&& len == 10 && ft_strncmp(nbr, "2147483647", 10) > 0)
 		return (ERROR);
 	if (nbr[0] == '-' && len == 11
 		&& ft_strncmp(nbr, "-2147483648", 11) > 0)
@@ -54,7 +54,7 @@ static int	ft_isnumber(char *nbr)
 	{
 		if (!ft_isdigit(nbr[i]))
 			return (ERROR);
-		i++;
+		i++ 
 	}
 	return (TRUE);
 }
@@ -69,7 +69,7 @@ int	parse(int argc, char **argv)
 		exit (ERROR);
 	while ((i < argc) && argv[i])
 	{
-		if (sign(argv[i] != ERROR && int_check(argv[i] != ERROR
+		if (ft_sign(argv[i] != ERROR && int_check(argv[i] != ERROR
 					&& ft_isnumber(argv[i] != ERROR))))
 		{
 			j = i + 1;
