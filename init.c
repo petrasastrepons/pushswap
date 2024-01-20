@@ -6,7 +6,7 @@
 /*   By: psastre <psastre@student.42barcelo>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 10:27:47 by psastre           #+#    #+#             */
-/*   Updated: 2023/10/28 12:50:35 by psastre          ###   ########.fr       */
+/*   Updated: 2024/01/20 10:54:55 by psastre          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ static int	init_stack(t_stack **stack)
 	return (SUCCESS);
 }
 
-int	double_init(t_stack **stk!, t_stack **stk2)
+int	double_init(t_stack **stk1, t_stack **stk2)
 {
 	if (init_stack(stk1) == ERROR || init_stack(skt2) == ERROR)
 	{

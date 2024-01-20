@@ -6,7 +6,7 @@
 /*   By: psastre <psastre@student.42barcelo>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 10:29:00 by psastre           #+#    #+#             */
-/*   Updated: 2023/11/15 19:12:17 by psastre          ###   ########.fr       */
+/*   Updated: 2024/01/20 10:26:42 by psastre          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,12 +76,12 @@ int	parse(int argc, char **argv)
 			while (j < (argc))
 			{
 				if (ft_atoi(argv[i]) == ft_atoi(argv[j]))
-					exit((write(1, "Error\n", 6) * 0) + ERROR);
+					exit((write(2, "Error\n", 6) * 0) + ERROR);
 				++j;
 			}
 		}
 		else
-			exit((write(1, "Error\n", 6) * 0) + ERROR);
+			exit((write(2, "Error\n", 6) * 0) + ERROR);
 		++i;
 	}
 	return (TRUE);
