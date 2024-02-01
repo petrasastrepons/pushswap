@@ -59,5 +59,6 @@ void	sort_digits(t_stack *stka, t_stack *stkb);
 void	sort_big(t_stack *stka, t_stack *stkb);
 void	indexer(t_stack *stk);
 int		find_pos(t_stack *src, int trgt);
+int		s_sort(t_stack *stka, t_stack *stkb);
 
 #endif

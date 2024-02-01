@@ -16,15 +16,14 @@ RM = rm -rf
 LIBC = ar -rcs
 FLAGS = -Wall -Wextra -Werror -g
 
-SRC = parse.c push_swap.c init.c r_rotate.c push.c swap.c util.c
+SRC = parse.c sort.c s-sort.c push_swap.c init.c rotate.c r_rotate.c push.c swap.c util.c
 LIBFT = ./libft/
-FTPRINTF = ./ft_printf/
 L_SRC = ./src
 L_LIB = ./libft/libft.a
 L_PRINTF = ./ft_printf/libftprintf.a
-INC = -I ./inc/\
-	  -I ./libft/\
-			-I ./ft_printf/\
+INC = 	-I ./inc/\
+	-I ./libft/\
+	
 
 D_OBJ = $(L_SRC)/obj
 OBJ = $(addprefix $(D_OBJ)/, $(SRC:.c=.o))
@@ -42,6 +41,8 @@ $(D_OBJ)/%.o: $(L_SRC)/%.c
 	$(CC) -MMD $(FLAGS) -c $< -o $@ $(INC)
 
 $(NAME): $(OBJ)
+	@echo hello
+	@echo OBJ: $(OBJ)	
 	$(CC) $(FLAGS) $(OBJ) $(L_LIB) -o $(NAME) $(INC)
 
 .PHONY: clean fclean re
