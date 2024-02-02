@@ -6,7 +6,7 @@
 /*   By: psastre <psastre@student.42barcelo>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 11:25:16 by psastre           #+#    #+#             */
-/*   Updated: 2023/11/15 18:51:10 by psastre          ###   ########.fr       */
+/*   Updated: 2024/02/02 19:44:39 by psastre          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,11 @@
 # define PUSH_SWAP_H
 
 # include "../libft/libft.h"
-# include "../printf/printf.h"
 # include <stdio.h>
 
 # define TRUE 1
 # define ERROR -1
 # define SUCCESS	0
-# define ERROR		0
 # define FALSE		1
 # define STKA		1
 # define STKB		2
@@ -45,7 +43,7 @@ int		double_init(t_stack **stk1, t_stack **stk2);
 int		free_change(t_stack *stk);
 void	change(t_stack *stka, t_stack *stkb);
 int		print_node(t_stack *stk);
-int		push(t_stack **src, t_stac **dst, int stk);
+int		push(t_stack **src, t_stack **dst, int stk);
 int		push_stack(t_stack **stk, int cont, int index);
 int		swap(t_stack *src, int stk);
 int		swap_swap(t_stack *stka, t_stack *stkb);
@@ -55,7 +53,7 @@ int		rotate_rotate(t_stack *stka, t_stack *stkb);
 int		r_rotate(t_stack *src, int stk);
 int		r_rot_rot(t_stack *stka, t_stack *stkb);
 int		is_sorted(t_stack *stack);
-void	sort_digits(t_stack *stka, t_stack *stkb);
+void	sort_digits(t_stack *stka, t_stack *stkb, int i);
 void	sort_big(t_stack *stka, t_stack *stkb);
 void	indexer(t_stack *stk);
 int		find_pos(t_stack *src, int trgt);

@@ -6,7 +6,7 @@
 #    By: psastre <psastre@student.42barcelo>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/28 12:24:54 by psastre           #+#    #+#              #
-#    Updated: 2023/11/15 18:48:34 by psastre          ###   ########.fr        #
+#    Updated: 2024/02/02 18:16:31 by psastre          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,11 +16,10 @@ RM = rm -rf
 LIBC = ar -rcs
 FLAGS = -Wall -Wextra -Werror -g
 
-SRC = parse.c sort.c s-sort.c push_swap.c init.c rotate.c r_rotate.c push.c swap.c util.c
+SRC = parse.c sort.c s_sort.c push_swap.c init.c rotate.c r_rotate.c push.c swap.c util.c
 LIBFT = ./libft/
 L_SRC = ./src
 L_LIB = ./libft/libft.a
-L_PRINTF = ./ft_printf/libftprintf.a
 INC = 	-I ./inc/\
 	-I ./libft/\
 	
